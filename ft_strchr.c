@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:37:40 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/24 16:47:36 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:20:10 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 		while (s[i])
 		{
 			if (s[i] == c)
-				return (c);
+				return ((char *)s + i);
 			i++;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:04:52 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/24 16:48:20 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:17:21 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	size;
-	int	i;
+	size_t	size;
+	size_t	i;
 
 	size = 0;
 	while (src[size])
