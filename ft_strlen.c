@@ -6,15 +6,15 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:02:57 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/22 18:18:25 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:40:17 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len])
