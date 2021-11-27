@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:27:08 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/26 20:02:21 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/27 12:25:07 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ int		ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

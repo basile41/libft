@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:48:06 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/26 20:10:48 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/27 12:56:30 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	char	*dst;
 
 	size = ft_strlen(s1);
-	dst = malloc(size + 1);
+	dst = malloc((size + 1) * sizeof(char));
 	if (!dst)
 		return (NULL);
 	i = 0;
