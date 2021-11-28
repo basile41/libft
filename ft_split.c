@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:21:37 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/27 18:12:32 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/28 15:38:02 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ char	*ft_strndup(const char *s1, size_t n)
 	return (dst);
 }
 
-int		str_count(char *str, char c)
+int	str_count(char *str, char c)
 {
 	int	i;
-	int b;
+	int	b;
 
 	i = 0;
 	b = 0;
@@ -46,6 +46,7 @@ int		str_count(char *str, char c)
 		if (*str != c && b == 0)
 		{
 			b = 1;
+			i++;
 		}
 		else if (*str == c)
 			b = 0;
@@ -56,5 +57,28 @@ int		str_count(char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	
+	char	**strs;
+	char	*ptr;
+	size_t	i;
+	size_t	size;
+
+	size = str_count((char *)s, c);
+	strs = malloc((size + 1) * sizeof(char *));
+	if (!strs)
+		return (NULL);
+	i = 0;
+	while (*s == c)
+		s++;
+	while (i < size)
+	{
+		ptr = (char *)s;
+		while (*s && *s != c)
+			s++;
+		strs[i] = ft_strndup(ptr, s - ptr);
+		while (*s == c)
+			s++;
+		i++;
+	}
+	strs[i] = NULL;
+	return (strs);
 }
