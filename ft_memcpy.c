@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:35:25 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/23 14:47:24 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/29 10:51:08 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*tmp1;
 	unsigned char	*tmp2;
 
+	if (!dst && !src)
+		return (NULL);
 	tmp1 = (unsigned char *)src;
 	tmp2 = (unsigned char *)dst;
 	i = 0;

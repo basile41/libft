@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:19:59 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/29 12:46:50 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/11/29 11:10:54 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
 	while (str[i])
 	{
 		str[i] = f(i, str[i]);
