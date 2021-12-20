@@ -6,7 +6,7 @@
 #    By: bregneau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 17:43:00 by bregneau          #+#    #+#              #
-#    Updated: 2021/12/03 13:22:53 by bregneau         ###   ########.fr        #
+#    Updated: 2021/12/20 11:42:13 by bregneau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
+				ranlib $(NAME)
 
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS)

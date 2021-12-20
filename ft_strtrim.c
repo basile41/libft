@@ -6,7 +6,7 @@
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 14:32:16 by bregneau          #+#    #+#             */
-/*   Updated: 2021/11/27 16:19:54 by bregneau         ###   ########.fr       */
+/*   Updated: 2021/12/12 13:08:15 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	i = ft_strlen(s1);
-	while (i && ft_strrchr(set, s1[i]))
+	while (i && ft_strchr(set, s1[i]))
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
