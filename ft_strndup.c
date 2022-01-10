@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bregneau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 10:02:50 by bregneau          #+#    #+#             */
-/*   Updated: 2022/01/09 12:56:30 by bregneau         ###   ########.fr       */
+/*   Created: 2021/12/06 06:12:01 by bregneau          #+#    #+#             */
+/*   Updated: 2021/12/06 06:12:18 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-/*
-void	ft_bzero(void *s, size_t n)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	size_t			i;
-	unsigned char	*b;
+	size_t	size;
+	size_t	i;
+	char	*dst;
 
-	b = s;
+	size = ft_strlen(s1);
+	if (size > n)
+		size = n;
+	dst = malloc((size + 1) * sizeof(char));
+	if (!dst)
+		return (NULL);
 	i = 0;
-	while (i < n)
-		b[i++] = 0;
-}
-*/
-void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
+	while (i < size)
+	{
+		dst[i] = s1[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
