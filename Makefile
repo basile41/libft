@@ -6,7 +6,7 @@
 #    By: bregneau <bregneau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 17:43:00 by bregneau          #+#    #+#              #
-#    Updated: 2022/01/13 21:08:04 by bregneau         ###   ########.fr        #
+#    Updated: 2022/01/13 22:22:04 by bregneau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,21 +35,29 @@ CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a
 
-all:			$(NAME)
+all:			bonus
+
+%.o: %.c
+				@$(CC) $(CFLAGS) -c $<
 
 $(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
-				ranlib $(NAME)
+				@ar rcs $(NAME) $(OBJS)
+				@ranlib $(NAME)
+				@echo "$(NAME) created"
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				@$(RM) $(OBJS) $(BONUS_OBJS)
+				@echo "Objects files deleted"
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
+				@echo "$(NAME) deleted"
 
-re:				fclean $(NAME)
+re:				fclean all
 
 bonus:			$(OBJS) $(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+				@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+				@ranlib $(NAME)
+				@echo "$(NAME) created"
 
 .PHONY:			all clean fclean re bonus
