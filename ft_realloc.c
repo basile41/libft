@@ -6,7 +6,7 @@
 /*   By: bregneau <bregneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 19:19:14 by bregneau          #+#    #+#             */
-/*   Updated: 2022/01/13 17:23:43 by bregneau         ###   ########.fr       */
+/*   Updated: 2022/01/16 20:29:48 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t size)
 	if (ptr == NULL)
 		return (malloc(size));
 	newptr = malloc(size);
+	if (newptr == NULL)
+		return (NULL);
 	if (old_size < size)
 		size = old_size;
 	ft_memcpy(newptr, ptr, size);
