@@ -6,7 +6,7 @@
 /*   By: bregneau <bregneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 16:52:21 by bregneau          #+#    #+#             */
-/*   Updated: 2022/01/26 18:23:57 by bregneau         ###   ########.fr       */
+/*   Updated: 2022/03/08 17:29:01 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "../libft.h"
 # include <stdarg.h>
-
-int	ft_printf(const char *format, ...);
 
 int	ft_print_char(unsigned char c);
 int	ft_print_str(char *str);
