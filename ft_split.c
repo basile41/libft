@@ -6,7 +6,7 @@
 /*   By: bregneau <bregneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:21:37 by bregneau          #+#    #+#             */
-/*   Updated: 2022/01/13 22:52:30 by bregneau         ###   ########.fr       */
+/*   Updated: 2022/09/08 18:10:46 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strndup(const char *s1, size_t n)
 	return (dst);
 }
 
-int	str_count(char *str, char c)
+int	ft_split_count(char *str, char c)
 {
 	int	i;
 	int	b;
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	size;
 
-	size = str_count((char *)s, c);
+	size = ft_split_count((char *)s, c);
 	strs = malloc((size + 1) * sizeof(char *));
 	if (!strs)
 		return (NULL);
