@@ -6,7 +6,7 @@
 /*   By: bregneau <bregneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:27:08 by bregneau          #+#    #+#             */
-/*   Updated: 2022/09/08 18:11:26 by bregneau         ###   ########.fr       */
+/*   Updated: 2022/09/09 14:19:39 by bregneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 int		ft_split_count(char *str, char c);
 char	**ft_split_f(char const *s, int (*f)(int));
+int		ft_split_f_count(char *str, int (*f)(int));
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
